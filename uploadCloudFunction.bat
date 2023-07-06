@@ -1,0 +1,1 @@
+"E:\software\WechatWeb\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-8gpip32va7b813e3 --n quickstartFunctions --r --project "D:\program\WechatWeb\notebook" --report_first --report

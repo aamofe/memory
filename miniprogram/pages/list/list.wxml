@@ -1,0 +1,33 @@
+<view>
+  <!-- 头部 -->
+  <view class="head-bg">
+    <view class="container">
+      <!-- 头像 -->
+      <image class="user-avatar" src="../../images/top_right(1).png"></image>
+      <!-- 问候语 -->
+      <text>开始记</text>
+    </view>
+  </view>
+</view>
+<!-- 内容部分 -->
+<view>
+  <!-- 提示图 -->
+  <image src="../../images/empty.png"></image>
+  <!-- 提示语 -->
+  <text>这里空空</text>
+  <!-- 新建按钮 -->
+  <view>+ 新建</view>
+</view>
+
+<!-- 内容部分 -->
+<view class="content">
+    <view>
+      <view>
+        <text>我的第一款小程序的诞生</text>
+        <text>2018-07-28</text>
+      </view>
+      <view>在这里我将毫无保留的与你分享自己这一路上的血与泪，抛 开技术，来谈谈与技术同样重要的成长方法论，让你……</view>
+    </view>
+  </view>
+  <!-- 添加icon -->
+  <image src="../../images/write1.png" ></image>

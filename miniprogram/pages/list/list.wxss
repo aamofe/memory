@@ -1,0 +1,60 @@
+/* pages/list/list.wxss */
+.head-bg {
+  width: 750rpx;
+  height: 540rpx;
+  background-image: url('../../images/logo.png'); 
+  background-size: 100% 100%;
+}
+.user-avatar {
+  /* position: fixed; */
+  top: 0;
+  right: inherit;
+  width: 300rpx;
+  height: 200rpx;
+}
+.user-avatar {
+ 
+  border-radius: 50%;
+  /* overflow: hidden; */
+  margin-left: 35rpx;
+  margin-top: 23rpx;
+}
+
+.head-bubble text {
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+  color: #6A5100;
+  font-size: 28rpx;
+}
+/* 内容样式 */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content image {
+  width: 380rpx;
+  height: 313rpx;
+  margin-top: 100rpx;
+}
+
+.content-tip {
+  width: 162rpx;
+  height: 25rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #CCCCCC;
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+.content-btn {
+  width: 340rpx;
+  height: 90rpx;
+  background: #F8D300;
+  border-radius: 20rpx;
+  color: #FFFEFE;
+  text-align: center;
+  line-height: 90rpx;
+}

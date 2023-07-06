@@ -1,0 +1,7 @@
+<view class="container">
+  <image src="../../images/logo_slogan.png" class="logo"></image>
+  <navigator url="/miniprogram/pages/list/list" open-type="redirect" hover-class="none">
+    <image src="../../images/button.png" class="btn"></image>
+  </navigator>
+
+</view>
