@@ -62,11 +62,11 @@ Page({
     selectedEnv: envList[0],
     haveCreateCollection: false
   },
-  // todoList(){
-  //   wx.navigateTo({
-  //     url: '../list/list',
-  //   })
-  // },
+  toList(){
+    wx.navigateTo({
+      url: '../list/list',
+    })
+  },
   onClickPowerInfo(e) {
     const index = e.currentTarget.dataset.index;
     const powerList = this.data.powerList;

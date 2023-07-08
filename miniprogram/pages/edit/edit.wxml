@@ -1,0 +1,12 @@
+<view class="container">
+  <!-- 时间 -->
+  <text class="date">{{nowDate}} {{nowTime}}</text>
+  <!-- 标题 -->
+  <input value="{{title}}" bindinput="bindTitle" class="title-font-size" placeholder-class="input-placeholder title-font-size" placeholder="请输入标题" maxlength="20"></input>
+  <!-- 分界线 -->
+  <view class="line"></view>
+  <!-- 内容 -->
+  <textarea value="{{content}}" bindinput="bindContent" class="content-font-size"  placeholder-class="input-placeholder content-font-size" placeholder="请输入内容" maxlength="1000"></textarea>
+</view>
+<!-- 保存 -->
+<view bindtap="save" class="save">{{index?'修改':'保存'}}</view>
