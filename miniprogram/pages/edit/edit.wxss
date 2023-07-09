@@ -31,12 +31,24 @@
 }
 /* 保存按钮 */
 .save {
-  width: 510rpx;
+  width: 250rpx;
   height: 110rpx;
-  background: #F8D300;
+  background: #0fda2a;
   border-radius: 20rpx;
   position: absolute;
   left: 120rpx;
+  bottom: 115rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 110rpx;
+}
+.cancel {
+  width: 250rpx;
+  height: 110rpx;
+  background: rgb(250, 70, 64);
+  border-radius: 20rpx;
+  position: absolute;
+  left: 380rpx; /* 调整取消按钮的位置 */
   bottom: 115rpx;
   color: #FFFFFF;
   text-align: center;

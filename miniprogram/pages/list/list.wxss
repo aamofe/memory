@@ -63,11 +63,23 @@
   text-align: right;
 }
 
-.list-content {
+list-content {
   margin-top: 50rpx;
   font-size: 26rpx;
-  font-weight: 400;
   color: #CCCCCC;
+  /* 隐藏溢出内容 */
+  overflow: hidden; 
+  /* 溢出内容用省略号 */
+  text-overflow: ellipsis;
+  /* 文字显示两行，需要组合下面四个属性*/
+  /* 将对象作为弹性伸缩盒子模型显示 */
+  display: -webkit-box;
+  /* 设置缩盒对象的子元素的排列方式 */
+  -webkit-box-orient: vertical;
+  /* 显示的文本的行数 */
+  -webkit-line-clamp: 2;
+  /* 允许换行到下一行 */
+  word-break: break-all;
 }
 
 .write {

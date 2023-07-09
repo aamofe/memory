@@ -7,6 +7,10 @@
   <view class="line"></view>
   <!-- 内容 -->
   <textarea value="{{content}}" bindinput="bindContent" class="content-font-size"  placeholder-class="input-placeholder content-font-size" placeholder="请输入内容" maxlength="1000"></textarea>
+  <button class="upload-button" bindtap="uploadImage">上传图片</button>
 </view>
 <!-- 保存 -->
-<view bindtap="save" class="save">{{index?'修改':'保存'}}</view>
+<view>
+  <view bindtap="save" class="save">{{index?'修改':'保存'}}</view>
+  <view bindtap="cancel" class="cancel">取消</view>
+</view>

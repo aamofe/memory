@@ -5,11 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
+    id:null,//唯一标识符
     title: null, // 标题
     content: null,// 内容
   },
   bindTitle(event) {
     this.data.title = event.detail.value
+  },
+  bindContent(event) {
+    this.data.content = event.detail.value
   },
   toEdit(event) {
     let index = event.currentTarget.dataset.index
@@ -26,10 +30,7 @@ Page({
       })
     }
   },
-  // 监听内容
-  bindContent(event) {
-    this.data.content = event.detail.value
-  },
+  
   // 保存数据
   save() {
     let title = this.data.title
@@ -50,32 +51,42 @@ Page({
       })
       return
     }
+    let list = wx.getStorageSync('list')||[]
+    if (this.data.index) {
+      // 删除
+      list.splice(this.data.index, 1)
+    }
     
     wx.showToast({
       title: '提交成功',
       icon: 'success',
       duration: 2000
     })
-    let list = wx.getStorageSync('list')||[]
+    
     // 组装数据对象
+    let index = 0;
+    if (list.length > 0) {
+      const maxId = Math.max.apply(
+        null,
+        list.map(item => item.id)
+      );
+      index = isNaN(maxId) ? 0 : maxId + 1;
+    }
     let data = {
+      id:index,
       title: title,
       content: content,
       date: this.getNowDate(),
       time: this.getNowTime()
     }
-    if (this.data.index) {
-      // 删除
-      list.splice(this.data.index, 1)
-    }
     // 在开头插入到数组中
     list.unshift(data)
     // 设置到本地缓存
     wx.setStorageSync('list', list)
-
-    // 省略提示代码
-    
     // 回到上一页面
+    wx.navigateBack()
+  },
+  cancel(){
     wx.navigateBack()
   },
   del(event) {

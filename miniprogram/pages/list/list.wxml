@@ -18,7 +18,7 @@
     
   </view>
   <block wx:else>
-    <view bindtap="toEdit" bindlongtap="del" data-index="{{index}}" class="list"  wx:for="{{list}}">
+    <view bindtap="toEdit" bindlongtap="del" data-index="{{index}}" class="list"  wx:for="{{list}}" wx:key="id">
       <view>
         <text class="list-title">{{item.title}}</text>
         <text class="list-date">{{item.date}}</text>

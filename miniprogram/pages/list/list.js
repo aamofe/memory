@@ -7,10 +7,20 @@ Page({
   data: {
     list: []
   },
-  toEdit(){
-    wx.navigateTo({
-      url: '/pages/edit/edit',
-    })
+  toEdit(event){
+    let index = event.currentTarget.dataset.index
+    let isClickItem = index >= 0
+    if (isClickItem) {
+      // 从列表点击
+      wx.navigateTo({
+        url: '/pages/edit/edit?index=' + index,
+      })
+    } else {
+      // 从新建按钮点击
+      wx.navigateTo({
+        url: '/pages/edit/edit',
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
